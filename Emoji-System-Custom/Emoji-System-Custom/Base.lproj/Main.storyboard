@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lcj-W8-jZq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -40,7 +40,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="409" y="154"/>
+            <point key="canvasLocation" x="890" y="196"/>
+        </scene>
+        <!--Emojize View Controller-->
+        <scene sceneID="dMR-Hq-4JV">
+            <objects>
+                <viewController id="lcj-W8-jZq" customClass="EmojizeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x7U-3C-rVd"/>
+                        <viewControllerLayoutGuide type="bottom" id="nwW-dG-J1j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W9N-gR-fne">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN8-d8-lmd">
+                                <rect key="frame" x="180" y="84" width="240" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="kUa-pa-pJ7"/>
+                                    <constraint firstAttribute="width" constant="240" id="pDF-m1-xuC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入表情字符" translatesAutoresizingMaskIntoConstraints="NO" id="LFx-f5-GmH">
+                                <rect key="frame" x="180" y="275" width="240" height="50"/>
+                                <color key="backgroundColor" red="0.62954933830000004" green="1" blue="0.99894974969999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Ys6-LN-pll"/>
+                                    <constraint firstAttribute="height" constant="50" id="trl-eN-wYN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-ge-Txk">
+                                <rect key="frame" x="277" y="470" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.47358372449413177" green="1" blue="0.26150603419148555" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="az5-hj-K1u"/>
+                                    <constraint firstAttribute="width" constant="46" id="eha-8v-7i9"/>
+                                </constraints>
+                                <state key="normal" title=" 转码">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="convert" destination="lcj-W8-jZq" eventType="touchUpInside" id="XH6-bm-Lkv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XN8-d8-lmd" firstAttribute="centerX" secondItem="W9N-gR-fne" secondAttribute="centerX" id="19M-cm-Ovq"/>
+                            <constraint firstItem="nwW-dG-J1j" firstAttribute="top" secondItem="0vx-ge-Txk" secondAttribute="bottom" constant="100" id="ODB-vR-B5y"/>
+                            <constraint firstItem="0vx-ge-Txk" firstAttribute="centerX" secondItem="W9N-gR-fne" secondAttribute="centerX" id="eE3-r9-nrz"/>
+                            <constraint firstItem="XN8-d8-lmd" firstAttribute="top" secondItem="x7U-3C-rVd" secondAttribute="bottom" constant="64" id="jUR-aG-vAN"/>
+                            <constraint firstItem="LFx-f5-GmH" firstAttribute="centerX" secondItem="W9N-gR-fne" secondAttribute="centerX" id="u7H-JY-NH4"/>
+                            <constraint firstItem="LFx-f5-GmH" firstAttribute="centerY" secondItem="W9N-gR-fne" secondAttribute="centerY" id="wjw-s7-yCd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="XN8-d8-lmd" id="2cf-r4-aK9"/>
+                        <outlet property="inputView" destination="LFx-f5-GmH" id="ald-zb-qyJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVd-91-sqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="248" y="210"/>
         </scene>
     </scenes>
 </document>

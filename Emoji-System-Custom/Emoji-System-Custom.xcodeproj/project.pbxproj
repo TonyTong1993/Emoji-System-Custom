@@ -16,6 +16,8 @@
 		848AB8301DD097BB00D139C8 /* EmojisList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848AB82F1DD097BB00D139C8 /* EmojisList.plist */; };
 		848AB8361DD097C900D139C8 /* AGEmojiKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848AB8331DD097C900D139C8 /* AGEmojiKeyBoardView.m */; };
 		848AB8371DD097C900D139C8 /* AGEmojiPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848AB8351DD097C900D139C8 /* AGEmojiPageView.m */; };
+		848AB83C1DD09DB900D139C8 /* NSString+Emojize.m in Sources */ = {isa = PBXBuildFile; fileRef = 848AB83B1DD09DB900D139C8 /* NSString+Emojize.m */; };
+		848AB83F1DD09E2B00D139C8 /* EmojizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848AB83E1DD09E2B00D139C8 /* EmojizeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,11 @@
 		848AB8331DD097C900D139C8 /* AGEmojiKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEmojiKeyBoardView.m; sourceTree = "<group>"; };
 		848AB8341DD097C900D139C8 /* AGEmojiPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEmojiPageView.h; sourceTree = "<group>"; };
 		848AB8351DD097C900D139C8 /* AGEmojiPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEmojiPageView.m; sourceTree = "<group>"; };
+		848AB8391DD09DB900D139C8 /* emojis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emojis.h; sourceTree = "<group>"; };
+		848AB83A1DD09DB900D139C8 /* NSString+Emojize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emojize.h"; sourceTree = "<group>"; };
+		848AB83B1DD09DB900D139C8 /* NSString+Emojize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emojize.m"; sourceTree = "<group>"; };
+		848AB83D1DD09E2B00D139C8 /* EmojizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojizeViewController.h; sourceTree = "<group>"; };
+		848AB83E1DD09E2B00D139C8 /* EmojizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojizeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +73,15 @@
 		848AB8161DD0979C00D139C8 /* Emoji-System-Custom */ = {
 			isa = PBXGroup;
 			children = (
+				848AB8381DD09DB900D139C8 /* NSStringEmojize */,
 				848AB8311DD097C900D139C8 /* AGEmojiKeyboard */,
 				848AB81A1DD0979C00D139C8 /* AppDelegate.h */,
 				848AB81B1DD0979C00D139C8 /* AppDelegate.m */,
 				848AB81D1DD0979C00D139C8 /* ViewController.h */,
 				848AB81E1DD0979C00D139C8 /* ViewController.m */,
 				848AB8201DD0979C00D139C8 /* Main.storyboard */,
+				848AB83D1DD09E2B00D139C8 /* EmojizeViewController.h */,
+				848AB83E1DD09E2B00D139C8 /* EmojizeViewController.m */,
 				848AB8231DD0979C00D139C8 /* Assets.xcassets */,
 				848AB8251DD0979C00D139C8 /* LaunchScreen.storyboard */,
 				848AB8281DD0979C00D139C8 /* Info.plist */,
@@ -106,6 +116,16 @@
 				848AB8351DD097C900D139C8 /* AGEmojiPageView.m */,
 			);
 			path = AGEmojiKeyboard;
+			sourceTree = "<group>";
+		};
+		848AB8381DD09DB900D139C8 /* NSStringEmojize */ = {
+			isa = PBXGroup;
+			children = (
+				848AB8391DD09DB900D139C8 /* emojis.h */,
+				848AB83A1DD09DB900D139C8 /* NSString+Emojize.h */,
+				848AB83B1DD09DB900D139C8 /* NSString+Emojize.m */,
+			);
+			path = NSStringEmojize;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848AB83F1DD09E2B00D139C8 /* EmojizeViewController.m in Sources */,
 				848AB8371DD097C900D139C8 /* AGEmojiPageView.m in Sources */,
+				848AB83C1DD09DB900D139C8 /* NSString+Emojize.m in Sources */,
 				848AB8361DD097C900D139C8 /* AGEmojiKeyBoardView.m in Sources */,
 				848AB81F1DD0979C00D139C8 /* ViewController.m in Sources */,
 				848AB81C1DD0979C00D139C8 /* AppDelegate.m in Sources */,
